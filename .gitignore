@@ -32,6 +32,11 @@ evaluation/scoreboard.csv
 
 
 *.txt
+!requirements*.txt
+*.npz
+.cache/
+__pycache__/
+.pytest_cache/
 *.mp4
 *.gzip
 *.pl3container
@@ -62,3 +67,9 @@ __pycache__/
 venv/
 env/
 .DS_Store
+
+# -- gated match data: ignore everything in data/ except its README -------------------------------
+# NOTE: ignoring does not untrack files already committed. Run `git rm -r --cached data` and keep
+# data/README.md, and rewrite history if the repository is or will be public.
+data/*
+!data/README.md
